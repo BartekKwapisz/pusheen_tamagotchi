@@ -29,6 +29,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .grid-item:hover {
@@ -39,6 +40,24 @@ body {
 
 .image {
   grid-row: span 3;
+}
+
+.bar {
+  min-width: 50%;
+  min-height: 15px;
+  border: 3px solid #ba3016;
+  background: rgb(255, 0, 0);
+  background: linear-gradient(90deg, rgb(255, 0, 0) 0%, rgb(254, 255, 0) 35%, rgb(69, 255, 0) 100%);
+  position: relative;
+  margin-top: 10px;
+}
+
+.bar-inside {
+  width: 30%;
+  min-height: 15px;
+  right: 0px;
+  position: absolute;
+  background-color: beige;
 }
 
 /*# sourceMappingURL=App.css.map */

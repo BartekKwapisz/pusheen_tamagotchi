@@ -29,6 +29,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 .grid-item:hover {
   box-shadow: inset 2px 2px 28px 0px rgba(247, 27, 27, 0.34);
@@ -39,3 +40,22 @@ body {
   grid-row: span 3;
 }
 
+.bar { 
+  min-width: 50%;
+  min-height: 15px;
+  border: 3px solid #ba3016;
+  background: rgb(255,0,0);
+  background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(254,255,0,1) 35%, rgba(69,255,0,1) 100%);
+  position: relative;
+  margin-top: 10px;
+}
+
+.bar-inside {
+  width: 30%;
+  min-height: 15px; 
+  right: 0px;
+  position: absolute;
+  background-color: beige;
+}
+
+// width >20% red, >40% orange, >60% yellow, >80% green
