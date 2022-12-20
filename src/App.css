@@ -1,3 +1,44 @@
+body {
+  background-color: rgba(201, 60, 60, 0.8);
+  background-image: url(https://img.icons8.com/emoji/48/null/red-heart.png);
+  background-size: auto;
+  background-position: left top;
+  background-repeat: repeat;
+}
 
+@font-face {
+  font-family: myFirstFont;
+  src: url("/src/assets/sponge.ttf");
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  font-family: myFirstFont;
+  color: #ba3016;
+}
+
+.grid-item {
+  border: 2px dotted rgba(201, 60, 60, 0.8);
+  box-shadow: inset 1px 1px 14px 0px rgba(247, 27, 27, 0.34);
+  border-radius: 7px 7px 7px 7px;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  background-color: #fbf0e4;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-item:hover {
+  box-shadow: inset 2px 2px 28px 0px rgba(247, 27, 27, 0.34);
+  cursor: pointer;
+  font-style: italic;
+}
+
+.image {
+  grid-row: span 3;
+}
 
 /*# sourceMappingURL=App.css.map */
