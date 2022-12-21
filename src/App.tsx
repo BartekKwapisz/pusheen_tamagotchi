@@ -1,23 +1,28 @@
-import { useState } from "react";
+import { useState, useReducer } from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
 import defaultImage from "./assets/default.gif";
+import Music from "./reducer.jsx"
+//https://beta.reactjs.org/apis/react/useReducer
+
 
 function App() {
-  const [audio, setAudio] = useState(new Audio("src/assets/candy.mp3"));
-  const [music, setMusic] = useState(true);
+  const [music, setMusic] = useState({
+    source: new Audio("src/assets/candy.mp3"),
+    play: true
+  })
   const playMusic = () => {
-    if (music) {
-      audio.play();
+    if (music.play) {
+      music.source.play();
     } else {
-      audio.pause();
+      music.source.pause();
     }
-    setMusic((music) => !music);
+    setMusic({...music, play: !music.play});
   };
   return (
     <div className="App">
       <div className="grid-container">
-        <div className="grid-item">Eat</div>
+        <Music></Music>
         <div className="grid-item image" onClick={playMusic}>
           <img src={defaultImage} />
         </div>
